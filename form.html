@@ -11,14 +11,13 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>Document</title>
 </head>
 
 <body>
-    <button type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#staticBackdrop"> <i
-            class="fa fa-rocket"></i> Pay Now
+    <button type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#staticBackdrop"
+        onclick="testform()"><i class="fa fa-rocket"></i> Pay Now
     </button>
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -32,31 +31,16 @@
                             <li class="nav-item" role="presentation"> <a class="nav-link active" id="visa-tab"
                                     data-toggle="tab" href="#visa" role="tab" aria-controls="visa" aria-selected="true">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
-                                        width="80"> </a> </li>
+                                        width="80"> </a>
+                            </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
                                 <div class="mt-4 mx-4">
                                     <div class="text-center">
-                                        <h5>Credit card</h5>
+                                        <h5>Pembayaran</h5>
                                     </div>
-                                    <form class="form mt-3" method="post"
-                                        action="">
-                                        <div class="inputbox"> <input type="text" name="CCNAME" class="form-control"
-                                                required="required"> <span>Cardholder Name</span> </div>
-                                        <div class="inputbox"> <input type="text" name="CARDNUMBER"
-                                                class="form-control" required="required"> <span>Card Number</span> <i
-                                                class="fa fa-eye"></i> </div>
-                                        <div class="d-flex flex-row">
-                                            <div class="inputbox"> <input type="text" name="EXP" onfocus="(this.type='month')" onblur="if(!this.value) this.type='text'"
-                                                    class="form-control" required="required">
-                                                    <span>Expiration Date</span> </div>
-                                            <div class="inputbox"> <input type="text" name="CVV2" min="1" max="999"
-                                                    class="form-control" required="required"> <span>CVV</span> </div>
-                                        </div>
-                                        <div class="px-5 pay">
-                                            <button onclick="test()" type="button" class="btn btn-success btn-block">Submit</button>
-                                        </div>
+                                    <form id="form" class="form mt-3" method="post">
                                     </form>
                                 </div>
                             </div>
